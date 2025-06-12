@@ -2,13 +2,13 @@
 
 .portfolio-stats {
     width: 100%;
-    margin-bottom: 2rem;
+    margin: 2rem auto;
 }
 
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .stat-card {

@@ -22,3 +22,8 @@
     transform: translateY(-10px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
+
+.portfolio-container {
+    margin-top: 100px;
+    /* 헤더 높이만큼 본문을 아래로 */
+}

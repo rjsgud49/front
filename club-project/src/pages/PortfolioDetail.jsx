@@ -1,7 +1,9 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 import './styles/PortfolioDetail.css';
 import { Portfoliodata } from '../data/Portfoliodata';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const PortfolioDetail = () => {
     const { id } = useParams();
@@ -12,10 +14,12 @@ const PortfolioDetail = () => {
     }
 
     return (
-        <div className="portfolio-container">
+        <div>
+            <Header />
+            <div className="portfolioDetail-container"> 
             <aside className="sidebar">
                 <div className="profile-box">
-                    <div className="profile-img" />
+                    <div className="profile-img"/>
                     <p><strong>이름:</strong> {portfolio.name}</p>
                     <p><strong>학년:</strong> {portfolio.grade}</p>
                     <p><strong>학과:</strong> {portfolio.classname}</p>
@@ -25,15 +29,18 @@ const PortfolioDetail = () => {
                     <div className="link-list">
                         <p><span className="label">📁 Github</span><br /><span>{portfolio.github}</span></p>
                         <p><span className="label">✉️ Email</span><br /><span>{portfolio.email}</span></p>
-                        <p><span className="label">📌 Notion</span><br /><span>{portfolio.notion}</span></p>
-                        <p><span className="label">📝 Velog</span><br /><span>{portfolio.velog}</span></p>
                     </div>
                 </div>
             </aside>
-
-            <main className="portfolio-content">
-                <p className="guide-text">마크다운 형식으로 자유롭게 구성한 포트폴리오 영역</p>
-            </main>
+                <main className="portfolio-content">
+                    <div className="markdown-editor">
+                        <div className="markdown-preview">
+                            <ReactMarkdown>{portfolio.markdown}</ReactMarkdown>
+                        </div>
+                    </div>
+                </main>
+            </div>
+                <Footer />
         </div>
     );
 };
