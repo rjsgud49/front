@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
-import Portfolio from '../pages/portfolio';
-import Contact from '../pages/Contact';
+import Portfolio from '../pages/Portfolio.jsx';
+import PortfolioDetail from '../pages/PortfolioDetail.jsx';
 import NotFound from '../pages/NotFound';
 
 const AppRoutes = () => {
@@ -11,7 +11,8 @@ const AppRoutes = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/portfolio/:id" element={<PortfolioDetail />} />
+                <Route path="/portfolio/:id/edit" element={<Portfolio />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>

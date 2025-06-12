@@ -1,0 +1,45 @@
+.portfolio-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f6f6f6;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-box {
+    text-align: left;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.link-list {
+    margin-top: 10px;
+}
+
+.label {
+    color: red;
+    font-weight: bold;
+}
+
+.portfolio-content {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+}
+
+.guide-text {
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}
