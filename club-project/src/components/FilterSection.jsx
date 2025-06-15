@@ -138,8 +138,6 @@ const FilterSection = ({
 
     return (
         <div className="filter-section">
-            
-
             <div className="filter-content">
                 {Object.entries(filterOptions).map(([category, options]) => (
                     <div key={category} className="filter-group">
